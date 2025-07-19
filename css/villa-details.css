@@ -1,0 +1,348 @@
+/* Villa Details Page Specific Styles */
+
+/* Villa Header */
+.villa-header {
+  background-color: var(--card-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.villa-id-display {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.villa-basic-info {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.info-item {
+  background-color: var(--background-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.price-highlight {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+/* Image Gallery */
+.image-gallery-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.image-gallery {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-light);
+}
+
+.main-image-container {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+#main-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius-lg);
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-nav:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+  left: var(--spacing-md);
+}
+
+.next-btn {
+  right: var(--spacing-md);
+}
+
+.thumbnails-container {
+  display: flex;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+  padding: var(--spacing-sm) 0;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+  border: 2px solid var(--primary-color);
+}
+
+/* Villa Description */
+.villa-description {
+  background-color: var(--card-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Location Section */
+.location-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.map-container {
+  background-color: var(--card-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+}
+
+#google-map {
+  border-radius: var(--border-radius);
+  width: 100%;
+  height: 400px;
+}
+
+/* Calendar Section */
+.calendar-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.calendar-container {
+  background-color: var(--card-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.calendar-nav {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-nav:hover {
+  background-color: var(--secondary-color);
+}
+
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.legend-color.available {
+  background-color: var(--success-color);
+}
+
+.legend-color.booked {
+  background-color: var(--danger-color);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day-header {
+  background-color: var(--background-color);
+  padding: var(--spacing-sm);
+  text-align: center;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.calendar-day.available {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.calendar-day.booked {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.calendar-day.other-month {
+  background-color: var(--background-color);
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.calendar-day.today {
+  border: 2px solid var(--primary-color);
+  font-weight: 700;
+}
+
+/* Booking Section */
+.booking-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.booking-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  text-align: center;
+}
+
+.booking-card h2 {
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.booking-card p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-lg);
+}
+
+.book-btn {
+  background-color: white;
+  color: var(--primary-color);
+  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.2rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-light);
+}
+
+.book-btn:hover {
+  background-color: var(--background-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Responsive Design for Villa Details */
+@media (max-width: 768px) {
+  .villa-basic-info {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #main-image {
+    height: 250px;
+  }
+  
+  .gallery-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .prev-btn {
+    left: var(--spacing-sm);
+  }
+  
+  .next-btn {
+    right: var(--spacing-sm);
+  }
+  
+  .calendar-legend {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #google-map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .villa-header,
+  .image-gallery,
+  .villa-description,
+  .map-container,
+  .calendar-container,
+  .booking-card {
+    padding: var(--spacing-md);
+  }
+  
+  #main-image {
+    height: 200px;
+  }
+  
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+  
+  .calendar-day {
+    font-size: 0.9rem;
+  }
+}

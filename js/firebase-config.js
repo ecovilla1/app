@@ -1,0 +1,31 @@
+// firebase-config.js
+// هذا الملف يقوم بتهيئة Firebase في تطبيقك ويصدر كائنات قاعدة البيانات والمصادقة والتخزين
+
+// استيراد الدوال اللازمة من Firebase SDKs
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js";
+
+// إعدادات مشروع Firebase الخاص بك
+// هذه القيم تم الحصول عليها من Firebase Console
+const firebaseConfig = {
+  apiKey: "AIzaSyD0E0dDyhdv9xDCFx8ZQi6lrymy8kK-J2c",
+  authDomain: "ecovilla-723df.firebaseapp.com",
+  projectId: "ecovilla-723df",
+  storageBucket: "ecovilla-723df.firebasestorage.app",
+  messagingSenderId: "488495908885",
+  appId: "1:488495908885:web:2bf6cd61130bc8a9d5e61c",
+  measurementId: "G-1ZHSD0Y4WB"
+};
+
+// تهيئة تطبيق Firebase
+const app = initializeApp(firebaseConfig);
+
+// الحصول على كائنات Firebase
+const db = getFirestore(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
+
+// تصدير الكائنات ليتم استخدامها في ملفات JavaScript الأخرى
+export { db, auth, storage };

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المالك - Eco Villa</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/owner-dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>Eco Villa</h1>
+                <div class="header-actions">
+                    <span id="owner-name" class="owner-name"></span>
+                    <button id="logout-btn" class="logout-btn">تسجيل الخروج</button>
+                </div>
+            </div>
+        </header>
+        
+        <main class="dashboard-main">
+            <div id="loading-message" class="loading-message">
+                <div class="loading-spinner">⏳</div>
+                <p>جاري تحميل بيانات الفيلا...</p>
+            </div>
+            
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            
+            <div id="dashboard-content" class="dashboard-content" style="display: none;">
+                <!-- Villa Details Section -->
+                <section class="villa-details-section">
+                    <h2>تفاصيل الفيلا</h2>
+                    <div class="villa-info-card">
+                        <div class="villa-images">
+                            <div class="main-image-container">
+                                <img id="main-image" class="main-image" alt="صورة الفيلا">
+                                <button id="prev-btn" class="nav-btn prev-btn">❮</button>
+                                <button id="next-btn" class="nav-btn next-btn">❯</button>
+                            </div>
+                            <div id="thumbnails-container" class="thumbnails-container"></div>
+                        </div>
+                        
+                        <div class="villa-info">
+                            <h3 id="villa-name"></h3>
+                            <p id="villa-id"></p>
+                            <p id="villa-area"></p>
+                            <p id="villa-rooms"></p>
+                            <p id="villa-price"></p>
+                            <p id="villa-description"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="villa-map">
+                        <h3>الموقع</h3>
+                        <iframe id="osm-map" class="map-iframe" frameborder="0"></iframe>
+                    </div>
+                </section>
+                
+                <!-- Calendar Section -->
+                <section class="calendar-section">
+                    <h2>إدارة التقويم</h2>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prev-month" class="month-nav-btn">❮</button>
+                            <h3 id="current-month"></h3>
+                            <button id="next-month" class="month-nav-btn">❯</button>
+                        </div>
+                        
+                        <div id="calendar-grid" class="calendar-grid"></div>
+                        
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <div class="legend-color available"></div>
+                                <span>متاح</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color booked"></div>
+                                <span>محجوز</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color pending"></div>
+                                <span>في انتظار التحديث</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calendar-actions">
+                            <button id="update-calendar-btn" class="update-calendar-btn">
+                                <span class="btn-text">تحديث التقويم</span>
+                                <span class="loading-spinner" style="display: none;">⏳</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="../../js/owner-dashboard.js"></script>
+</body>
+</html>

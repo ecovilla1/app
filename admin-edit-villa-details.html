@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل تفاصيل الفيلا - EcoVilla</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/admin-forms.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="EcoVilla Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="admin-dashboard.html">لوحة التحكم</a></li>
+                <li><a href="#" id="logout-btn" class="login-btn">تسجيل الخروج</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-form-container villa-form">
+            <h2>تعديل تفاصيل الفيلا</h2>
+            <div class="loading">جاري تحميل بيانات الفيلا...</div>
+            
+            <div class="admin-form" style="display: none;">
+                <div class="form-section">
+                    <h3>معلومات أساسية</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group readonly">
+                            <label for="villa-id">رقم الفيلا</label>
+                            <input type="text" id="villa-id" readonly>
+                        </div>
+                        
+                        <div class="form-group readonly">
+                            <label for="villa-name">اسم الفيلا</label>
+                            <input type="text" id="villa-name" readonly>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="villa-description">وصف الفيلا</label>
+                        <textarea id="villa-description" placeholder="أدخل وصف الفيلا" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="villa-price">السعر اليومي (ل.س)</label>
+                            <input type="number" id="villa-price" placeholder="أدخل السعر">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="villa-rooms">عدد الغرف</label>
+                            <select id="villa-rooms">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="villa-area">المنطقة</label>
+                        <select id="villa-area">
+                            <option value="طريق مطار">طريق مطار</option>
+                            <option value="زبداني">زبداني</option>
+                            <option value="مضايا">مضايا</option>
+                            <option value="جديدة صبورة">جديدة صبورة</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="villa-location">رابط الموقع (Google Maps)</label>
+                        <input type="text" id="villa-location" placeholder="أدخل رابط Google Maps">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="villa-notes">ملاحظات (للإدارة فقط)</label>
+                        <textarea id="villa-notes" placeholder="أدخل ملاحظات خاصة بالإدارة" rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>الصور</h3>
+                    
+                    <div class="current-images" id="current-images">
+                        <!-- Current images will be shown here -->
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="villa-images">إضافة صور جديدة</label>
+                        <input type="file" id="villa-images" multiple accept="image/*">
+                    </div>
+                    
+                    <div class="image-preview" id="image-preview">
+                        <!-- Image previews will be shown here -->
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>إدارة الحجوزات</h3>
+                    
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prev-month" class="calendar-nav">الشهر السابق</button>
+                            <h4 id="current-month"></h4>
+                            <button id="next-month" class="calendar-nav">الشهر التالي</button>
+                        </div>
+                        <div class="calendar" id="booking-calendar">
+                            <!-- Calendar will be generated dynamically -->
+                        </div>
+                        <div class="calendar-legend">
+                            <div class="legend-item">
+                                <div class="legend-color available"></div>
+                                <span>متاح</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color booked"></div>
+                                <span>محجوز</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="

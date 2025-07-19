@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المدير - Eco Villa</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/admin-dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="../../images/logo.png.jpeg" alt="Eco Villa Logo" class="header-logo">
+                    <h1>Eco Villa</h1>
+                    <span class="admin-badge">لوحة تحكم المدير</span>
+                </div>
+                
+                <div class="header-actions">
+                    <span id="adminWelcome" class="welcome-text">مرحباً، المدير</span>
+                    <button id="logoutBtn" class="logout-btn">تسجيل الخروج</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <nav class="dashboard-nav">
+            <div class="nav-content">
+                <div class="nav-item" id="manageVillasBtn">
+                    <div class="nav-icon">🏠</div>
+                    <span>إدارة الفلل</span>
+                </div>
+                
+                <div class="nav-item" id="manageUsersBtn">
+                    <div class="nav-icon">👥</div>
+                    <span>إدارة المستخدمين</span>
+                </div>
+                
+                <div class="nav-item" id="reviewBookingsBtn">
+                    <div class="nav-icon">📅</div>
+                    <span>مراجعة الحجوزات</span>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <div class="welcome-section">
+                <h2>مرحباً بك في لوحة تحكم المدير</h2>
+                <p>اختر من القائمة أعلاه للبدء في إدارة النظام</p>
+            </div>
+            
+            <!-- Temporary Message Display -->
+            <div id="messageDisplay" class="message-display" style="display: none;">
+                <div class="message-content">
+                    <h3 id="messageTitle"></h3>
+                    <p id="messageText"></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script type="module" src="../../js/admin-dashboard.js"></script>
+</body>
+</html>

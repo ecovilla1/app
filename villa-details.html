@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الفيلا - إيكو فيلا</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/villa-details.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/ecovilla1/ecovilla-images/6010598bc1175709a39f858135f63a8a0ccdcf11/logo.png.jpeg" alt="إيكو فيلا" class="logo-img">
+                <h1>🏡 Eco Villa</h1>
+                <a href="index.html" class="back-btn">← العودة للرئيسية</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Loading State -->
+            <div id="loading-message" class="loading" style="display: block;">جاري تحميل تفاصيل الفيلا</div>
+            
+            <!-- Villa Details Container -->
+            <div id="villa-details-container" style="display: none;">
+                <!-- Villa Header -->
+                <section class="villa-header">
+                    <h1 id="villa-name"></h1>
+                    <p id="villa-id" class="villa-id-display"></p>
+                    <div class="villa-basic-info">
+                        <span id="villa-area" class="info-item"></span>
+                        <span id="villa-rooms" class="info-item"></span>
+                        <span id="villa-price" class="info-item price-highlight"></span>
+                    </div>
+                </section>
+
+                <!-- Image Gallery -->
+                <section class="image-gallery-section">
+                    <h2>معرض الصور</h2>
+                    <div class="image-gallery">
+                        <div class="main-image-container">
+                            <img id="main-image" src="" alt="صورة الفيلا">
+                            <button class="gallery-nav prev-btn" id="prev-btn">‹</button>
+                            <button class="gallery-nav next-btn" id="next-btn">›</button>
+                        </div>
+                        <div class="thumbnails-container" id="thumbnails-container">
+                            <!-- Thumbnails will be dynamically loaded -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Villa Description -->
+                <section class="villa-description">
+                    <h2>وصف الفيلا</h2>
+                    <p id="villa-description"></p>
+                </section>
+
+                <!-- OpenStreetMap -->
+                <section class="location-section">
+                    <h2>الموقع</h2>
+                    <div class="map-container">
+                        <iframe id="osm-map" 
+                                width="100%" 
+                                height="400" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="خريطة موقع الفيلا">
+                        </iframe>
+                    </div>
+                </section>
+
+                <!-- Availability Calendar -->
+                <section class="calendar-section">
+                    <h2>التوفر</h2>
+                    <div class="calendar-container">
+                        <div class="calendar-header">
+                            <button id="prev-month" class="calendar-nav">‹</button>
+                            <h3 id="current-month"></h3>
+                            <button id="next-month" class="calendar-nav">›</button>
+                        </div>
+                        <div class="calendar-legend">
+                            <span class="legend-item"><span class="legend-color available"></span> متاح</span>
+                            <span class="legend-item"><span class="legend-color booked"></span> محجوز</span>
+                        </div>
+                        <div id="calendar-grid" class="calendar-grid">
+                            <!-- Calendar will be dynamically generated -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Book Now Section -->
+                <section class="booking-section">
+                    <div class="booking-card">
+                        <h2>احجز الآن</h2>
+                        <p>للحجز والاستفسار، تواصل معنا عبر واتساب</p>
+                        <button id="book-now-btn" class="btn btn-large book-btn">
+                            📱 احجز عبر واتساب
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-message" class="error-message" style="display: none;">
+                <p>حدث خطأ في تحميل تفاصيل الفيلا</p>
+                <button onclick="location.reload()" class="btn">إعادة المحاولة</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 إيكو فيلا. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/villa-details.js"></script>
+</body>
+</html>

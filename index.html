@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيكو فيلا - حجز الفلل</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/ecovilla1/ecovilla-images/6010598bc1175709a39f858135f63a8a0ccdcf11/logo.png.jpeg" alt="إيكو فيلا" class="logo-img">
+                <h1>🏡 Eco Villa</h1>
+                <p>اكتشف أجمل الفلل للإيجار</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Search and Filter Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <h2>ابحث عن الفيلا المثالية</h2>
+                    <div class="filters">
+                        <!-- Text Search -->
+                        <div class="filter-group">
+                            <label for="search-text">البحث بالاسم أو الوصف:</label>
+                            <input type="text" id="search-text" placeholder="ابحث عن فيلا...">
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div class="filter-group">
+                            <label for="price-filter">السعر لليوم الواحد:</label>
+                            <select id="price-filter">
+                                <option value="">جميع الأسعار</option>
+                                <option value="0-500000">أقل من 500 ألف ل.س/اليوم</option>
+                                <option value="500000-1000000">بين 500 ألف و مليون ل.س/اليوم</option>
+                                <option value="1000000-2000000">بين مليون و مليونين ل.س/اليوم</option>
+                                <option value="2000000+">أكثر من مليونين ل.س/اليوم</option>
+                            </select>
+                        </div>
+
+                        <!-- Rooms Filter -->
+                        <div class="filter-group">
+                            <label for="rooms-filter">عدد الغرف:</label>
+                            <select id="rooms-filter">
+                                <option value="">جميع الغرف</option>
+                                <option value="1">غرفة واحدة</option>
+                                <option value="2">غرفتان</option>
+                                <option value="3">3 غرف</option>
+                                <option value="4">4 غرف</option>
+                                <option value="5+">5 غرف أو أكثر</option>
+                            </select>
+                        </div>
+
+                        <!-- Area Filter -->
+                        <div class="filter-group">
+                            <label for="area-filter">المنطقة:</label>
+                            <select id="area-filter">
+                                <option value="">جميع المناطق</option>
+                                <option value="طريق مطار">طريق مطار</option>
+                                <option value="زبداني">زبداني</option>
+                                <option value="مضايا">مضايا</option>
+                                <option value="جديدة صبورة">جديدة صبورة</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+
+                        <!-- Search Button -->
+                        <div class="filter-group">
+                            <button type="button" id="search-btn" class="btn">بحث</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Villas Section -->
+            <section class="villas-section">
+                <h2>الفلل المتاحة</h2>
+                <div id="loading-message" class="loading" style="display: none;">جاري تحميل الفلل</div>
+                <div id="villas-container" class="villas-container">
+                    <!-- Villa cards will be dynamically loaded here -->
+                </div>
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p>لم يتم العثور على فلل تطابق معايير البحث</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 إيكو فيلا. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

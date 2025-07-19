@@ -1,0 +1,263 @@
+/* Admin Dashboard Specific Styles */
+.dashboard-container {
+    min-height: 100vh;
+    background: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.dashboard-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-section h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.admin-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-text {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.logout-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Navigation Styles */
+.dashboard-nav {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    padding: 0;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 0;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    color: #666;
+    font-weight: 500;
+}
+
+.nav-item:hover {
+    background: #f8f9fa;
+    color: #667eea;
+    border-bottom-color: #667eea;
+}
+
+.nav-item.active {
+    background: #f8f9fa;
+    color: #667eea;
+    border-bottom-color: #667eea;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+/* Main Content Styles */
+.dashboard-main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Message Display Styles */
+.message-display {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    text-align: center;
+    border: 2px solid #667eea;
+}
+
+.message-content h3 {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.message-content p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .header-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .nav-item {
+        justify-content: center;
+        padding: 15px 20px;
+        border-bottom: 1px solid #e9ecef;
+        border-right: none;
+    }
+    
+    .nav-item:hover,
+    .nav-item.active {
+        border-bottom-color: #667eea;
+        border-right-color: transparent;
+    }
+    
+    .dashboard-main {
+        padding: 20px 15px;
+    }
+    
+    .welcome-section {
+        padding: 40px 20px;
+    }
+    
+    .welcome-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .message-display {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header {
+        padding: 15px 0;
+    }
+    
+    .header-content {
+        padding: 0 15px;
+    }
+    
+    .logo-section h1 {
+        font-size: 1.4rem;
+    }
+    
+    .admin-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .nav-item {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .welcome-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .welcome-section p {
+        font-size: 1rem;
+    }
+}
