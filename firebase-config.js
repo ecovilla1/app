@@ -10,7 +10,7 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-s
 // إعدادات مشروع Firebase الخاص بك
 // هذه القيم تم الحصول عليها من Firebase Console
 const firebaseConfig = {
-  apiKey: "",
+  apiKey: "AIzaSyD0E0dDyhdv9xDCFx8ZQi6lrymy8kK-J2c",
   authDomain: "ecovilla-723df.firebaseapp.com",
   projectId: "ecovilla-723df",
   storageBucket: "ecovilla-723df.firebasestorage.app",
